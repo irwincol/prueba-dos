@@ -19,6 +19,15 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    
+    // Capturar y mostrar por consola
+    console.log("Datos del formulario capturados:", formData)
+    
+    // Almacenar en localStorage
+    const savedMessages = JSON.parse(localStorage.getItem("contact_messages") || "[]")
+    savedMessages.push({ ...formData, date: new Date().toISOString() })
+    localStorage.setItem("contact_messages", JSON.stringify(savedMessages))
+    
     setEnviado(true)
     setFormData(initialFormState)
     setTimeout(() => setEnviado(false), 5000)

@@ -533,7 +533,7 @@ button {
 .contact-info__item-icon {
   width: 40px;
   height: 40px;
-  background-color: var(--color-primary);
+  background-color: #3b82f6; /* Blue */
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
