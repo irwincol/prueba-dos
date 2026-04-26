@@ -54,6 +54,13 @@ const ContactoPage = () => {
       <Navbar />
       <main className="contacto-page" id="contacto">
         <div className="container">
+          <header className="section-header">
+            <h1 className="section-header__title">CONTACTO</h1>
+            <p className="section-header__subtitle">
+              ¿Tienes alguna pregunta? Nos encantaría escucharte
+            </p>
+          </header>
+
           <div className="contact-layout">
             {/* Columna de información */}
             <div className="contact-info">

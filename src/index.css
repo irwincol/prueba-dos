@@ -195,7 +195,7 @@ button {
 
 .hero__title {
   font-size: clamp(2.5rem, 8vw, 5rem);
-  font-weight: 900;
+  font-weight: 700;
   color: var(--color-white);
   line-height: 1;
   margin-bottom: 24px;
@@ -209,7 +209,7 @@ button {
 
 .hero__description {
   font-size: 1.25rem;
-  color: var(--color-gray-400);
+  color: var(--color-white);
   max-width: 600px;
   line-height: 1.6;
   margin-bottom: 48px;
@@ -355,16 +355,16 @@ button {
 
 .section-header__title {
   font-size: clamp(1.8rem, 4vw, 2.5rem);
-  font-weight: 900;
+  font-weight: 700;
   color: var(--color-text-dark);
   letter-spacing: -0.5px;
   margin-bottom: 12px;
 }
 
 .section-header__subtitle {
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: var(--color-text-muted);
-  max-width: 480px;
+  max-width: 520px;
   margin: 0 auto;
 }
 
@@ -498,7 +498,9 @@ button {
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
-  gap: 64px;
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
   align-items: start;
 }
 
@@ -544,7 +546,7 @@ button {
 .contact-info__item-icon svg {
   width: 18px;
   height: 18px;
-  stroke: var(--color-dark);
+  stroke: var(--color-white);
   fill: none;
   stroke-width: 2;
   stroke-linecap: round;
