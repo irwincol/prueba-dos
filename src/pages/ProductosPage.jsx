@@ -1,9 +1,11 @@
 import ProductCard from "../components/ProductCard"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 
 const productos = [
   {
-    id: "camiseta-oversize",
-    nombre: "Camiseta Oversize",
+    id: "camiseta-urban",
+    nombre: "Camiseta Básica Urban",
     descripcion: "Algodón 100% orgánico",
     precio: 29,
     icono: (
@@ -25,8 +27,8 @@ const productos = [
     ),
   },
   {
-    id: "sudadera-hoodie",
-    nombre: "Sudadera Hoodie",
+    id: "sudadera-oversize",
+    nombre: "Sudadera Oversize",
     descripcion: "Algodón French Terry",
     precio: 65,
     icono: (
@@ -78,28 +80,32 @@ const productos = [
 
 const ProductosPage = () => {
   return (
-    <main className="productos-page" id="productos">
-      <div className="container">
-        <header className="section-header">
-          <h1 className="section-header__title">Nuestra Colección</h1>
-          <p className="section-header__subtitle">
-            Descubre nuestra colección exclusiva de ropa urbana minimalista
-          </p>
-        </header>
+    <>
+      <Navbar />
+      <main className="productos-page" id="productos">
+        <div className="container">
+          <header className="section-header">
+            <h1 className="section-header__title">Nuestra Colección</h1>
+            <p className="section-header__subtitle">
+              Descubre nuestra colección exclusiva de ropa urbana minimalista
+            </p>
+          </header>
 
-        <div className="products-grid">
-          {productos.map((producto) => (
-            <ProductCard
-              key={producto.id}
-              nombre={producto.nombre}
-              descripcion={producto.descripcion}
-              precio={producto.precio}
-              icono={producto.icono}
-            />
-          ))}
+          <div className="products-grid">
+            {productos.map((producto) => (
+              <ProductCard
+                key={producto.id}
+                nombre={producto.nombre}
+                descripcion={producto.descripcion}
+                precio={producto.precio}
+                icono={producto.icono}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+      <Footer />
+    </>
   )
 }
 

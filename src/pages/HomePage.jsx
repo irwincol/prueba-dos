@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 import FeatureCard from "../components/FeatureCard"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 
 const features = [
   {
@@ -37,41 +39,45 @@ const features = [
 
 const HomePage = () => {
   return (
-    <main id="inicio">
-      {/* Hero */}
-      <section className="hero" aria-label="Sección principal">
-        <div className="hero__bg" />
-        <div className="hero__overlay" />
-        <div className="hero__content">
-          <h1 className="hero__title">
-            ESTILO URBANO<br />
-            <span>REDEFINIDO</span>
-          </h1>
-          <p className="hero__description">
-            Descubre nuestra colección exclusiva de ropa urbana con estilo y calidad premium.
-          </p>
-          <div className="hero__actions">
-            <Link to="/productos" className="btn-primary" id="cta-explorar">
-              Explorar Colección
-            </Link>
+    <>
+      <Navbar />
+      <main id="inicio">
+        {/* Hero */}
+        <section className="hero" aria-label="Sección principal">
+          <div className="hero__bg" />
+          <div className="hero__overlay" />
+          <div className="hero__content">
+            <h1 className="hero__title">
+              ESTILO URBANO<br />
+              <span>REDEFINIDO</span>
+            </h1>
+            <p className="hero__description">
+              Descubre nuestra colección exclusiva de ropa urbana minimalista
+            </p>
+            <div className="hero__actions">
+              <Link to="/productos" className="btn-primary" id="cta-explorar">
+                Explorar Colección
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Features */}
-      <section className="features" aria-label="Características">
-        <div className="features__inner">
-          {features.map((feature) => (
-            <FeatureCard
-              key={feature.id}
-              icono={feature.icono}
-              titulo={feature.titulo}
-              descripcion={feature.descripcion}
-            />
-          ))}
-        </div>
-      </section>
-    </main>
+        {/* Features */}
+        <section className="features" aria-label="Características">
+          <div className="features__inner">
+            {features.map((feature) => (
+              <FeatureCard
+                key={feature.id}
+                icono={feature.icono}
+                titulo={feature.titulo}
+                descripcion={feature.descripcion}
+              />
+            ))}
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   )
 }
 

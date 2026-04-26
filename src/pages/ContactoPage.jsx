@@ -1,4 +1,6 @@
 import ContactForm from "../components/ContactForm"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 
 const contactItems = [
   {
@@ -48,33 +50,37 @@ const contactItems = [
 
 const ContactoPage = () => {
   return (
-    <main className="contacto-page" id="contacto">
-      <div className="container">
-        <div className="contact-layout">
-          {/* Columna de información */}
-          <div className="contact-info">
-            <ul className="contact-info__items">
-              {contactItems.map((item) => (
-                <li key={item.id} className="contact-info__item">
-                  <div className="contact-info__item-icon">
-                    {item.icono}
-                  </div>
-                  <div>
-                    <p className="contact-info__item-label">{item.label}</p>
-                    {item.value.split("\n").map((line, i) => (
-                      <p key={i} className="contact-info__item-value">{line}</p>
-                    ))}
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
+    <>
+      <Navbar />
+      <main className="contacto-page" id="contacto">
+        <div className="container">
+          <div className="contact-layout">
+            {/* Columna de información */}
+            <div className="contact-info">
+              <ul className="contact-info__items">
+                {contactItems.map((item) => (
+                  <li key={item.id} className="contact-info__item">
+                    <div className="contact-info__item-icon">
+                      {item.icono}
+                    </div>
+                    <div>
+                      <p className="contact-info__item-label">{item.label}</p>
+                      {item.value.split("\n").map((line, i) => (
+                        <p key={i} className="contact-info__item-value">{line}</p>
+                      ))}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Formulario */}
-          <ContactForm />
+            {/* Formulario */}
+            <ContactForm />
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+      <Footer />
+    </>
   )
 }
 
