@@ -52,7 +52,7 @@ const HomePage = () => {
           </p>
           <div className="hero__actions">
             <Link to="/productos" className="btn-primary" id="cta-explorar">
-              Ver Colección
+              Explorar Colección
             </Link>
           </div>
         </div>
